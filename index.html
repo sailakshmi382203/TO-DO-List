@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="input-container">
+            <h2>To-Do List</h2>
+            
+            <!-- Search Bar for Task Name -->
+            <input type="text" id="search-input" placeholder="Search tasks by name..." oninput="searchTasks()">
+            
+            <!-- Dropdown to Search by Status -->
+            <select id="status-select" onchange="searchTasks()">
+                <option value="all">Status</option>
+                <option value="incomplete">Incomplete</option>
+                <option value="complete">Complete</option>
+                <option value="none">None</option>
+
+            </select>
+            
+            <!-- Task Input Section -->
+            <input type="text" id="todo-input" placeholder="Enter a task...">
+            <select id="status-select-input">
+                <option value="incomplete">Incomplete</option>
+                <option value="complete">Complete</option>
+            </select>
+            <button id="add-btn">Add Task</button>
+            <button id="clear-all-btn">Clear All</button>
+        </div>
+
+        <!-- Right Container for Showing Tasks -->
+        <div class="task-container">
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
